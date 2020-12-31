@@ -1,5 +1,7 @@
 # ThinkerJudge
-Evaluation of moves from World Championship Games. [Analysis data](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/human_eval.csv) can be found in the docs folder.
+Evaluation of moves from World Championship Games. [Analysis data](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/human_eval.csv) can be found in the docs folder. Games in [pgn files](https://github.com/fsmosca/ThinkerJudge/tree/main/docs/pgn) are in the docs folder as well.
+
+Moves are evaluated by Stockfish 13 dev 2020-12-14 NNUE at 5s/position on 4 threads with i7-2600K processor. Calculation of errors starts at move 12 and it is ended once the score of the game move and engine move are more than 500cp or less than -500cp.
 
 ### Average error in centipawn comparison
 
