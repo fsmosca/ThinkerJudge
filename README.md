@@ -389,3 +389,4 @@ F. Rating according to Stockfish 13 dev NNUE
 
 ### Credits
 * [PGN Mentor](https://www.pgnmentor.com/files.html)
+* [Stockfish](https://stockfishchess.org/)
