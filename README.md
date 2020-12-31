@@ -98,3 +98,9 @@ F. Rating according to Stockfish 13 dev NNUE
 |        10 |      2677 |    2652 |
 +-----------+-----------+---------+
 ```
+
+### References
+* [Guid and Bratko 2006](https://ailab.si/matej/doc/Computer_Analysis_of_World_Chess_Champions.pdf)
+
+### Credits
+* [PGN Mentor](https://www.pgnmentor.com/files.html)
