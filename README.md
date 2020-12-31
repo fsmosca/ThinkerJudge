@@ -3,11 +3,11 @@ Evaluation of moves from World Championship Games. [Analysis data](https://githu
 
 Moves are evaluated by Stockfish 13 dev 2020-12-14 NNUE at 5s/position on 4 threads with i7-2600K processor. Calculation of errors starts at move 12 and it is ended once the score of the game move and engine move are more than 500cp or less than -500cp.
 
-### Average error in centipawn comparison
+### A. Average error in centipawn comparison
 
 ![error](https://i.imgur.com/ODKUR5q.png)
 
-### Features
+### B. Features
 
 #### Fischer-Spassky 1972
 ```
@@ -384,9 +384,9 @@ F. Rating according to Stockfish 13 dev NNUE
 +-----------+-----------+---------+
 ```
 
-### References
+### C. References
 * [Guid and Bratko 2006](https://ailab.si/matej/doc/Computer_Analysis_of_World_Chess_Champions.pdf)
 
-### Credits
+### D. Credits
 * [PGN Mentor](https://www.pgnmentor.com/files.html)
 * [Stockfish](https://stockfishchess.org/)
