@@ -3,6 +3,20 @@ Evaluation of moves from World Championship Games. [Analysis data](https://githu
 
 Moves are evaluated by Stockfish 13 dev 2020-12-14 NNUE at 5s/position on 4 threads with i7-2600K processor. Calculation of errors starts at move 12 and it is ended once the score of the game move and engine move are more than 500cp or less than -500cp.
 
+### Setup
+* Install python 3.8 or later
+* Download this [repository](https://github.com/fsmosca/ThinkerJudge/archive/main.zip)
+* Install dependency
+  * pip install chess
+  
+### Command line
+Analyze the positions in the game on the pgn file.  
+```
+python evaluate.py --input-pgn ./docs/pgn/WorldChamp1972.pgn --engine-file stockfish_12 --engine-options "{'Threads': 2, 'Hash': 256, 'SyzygyPath': 'F:/Chess/EGTB/syzygy_3456'}" --movetime-ms 1000`
+```
+
+The analyzed games will be saved in `out_WorldChamp1972.pgn` and the analyzed positions will be saved in `human_eval.csv` which can be used to generate average errors of players.
+
 ### A. Average error in centipawn comparison
 
 ![error](https://i.imgur.com/ODKUR5q.png)
