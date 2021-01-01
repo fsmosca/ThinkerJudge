@@ -17,6 +17,8 @@ python evaluate.py --input-pgn ./docs/pgn/WorldChamp1972.pgn --engine-file stock
 
 The analyzed games will be saved in `out_WorldChamp1972.pgn` and the analyzed positions will be saved in `human_eval.csv` which can be used to generate average errors of players.
 
+See the [help page](https://github.com/fsmosca/ThinkerJudge/wiki/Help) for more command line options.
+
 ### A. Average error in centipawn comparison
 
 ![error](https://i.imgur.com/ODKUR5q.png)
