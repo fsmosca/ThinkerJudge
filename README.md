@@ -406,3 +406,4 @@ F. Rating according to Stockfish 13 dev NNUE
 ### D. Credits
 * [PGN Mentor](https://www.pgnmentor.com/files.html)
 * [Stockfish](https://stockfishchess.org/)
+* [Python Chess](https://github.com/niklasf/python-chess)
