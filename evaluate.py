@@ -12,7 +12,7 @@ requirements:
 """
 
 
-__version__ = 'v1.0.1'
+__version__ = 'v1.1.0'
 __author__ = 'fsmosca'
 __script_name__ = 'Chess Positions Evaluator'
 __goal__ = 'Read games in pgn file and save its analysis.'
@@ -100,6 +100,9 @@ class GameAnalyzer:
         # Copy header.
         for k, v in game.headers.items():
             my_game.headers[k] = v
+
+        # Add annotator tag.
+        my_game.headers['Annotator'] = engine.id['name']
 
         # Parse the game.
         for node in game.mainline():
