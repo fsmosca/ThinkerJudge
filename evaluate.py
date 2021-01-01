@@ -12,7 +12,7 @@ requirements:
 """
 
 
-__version__ = 'v1.0.0'
+__version__ = 'v1.0.1'
 __author__ = 'fsmosca'
 __script_name__ = 'Chess Positions Evaluator'
 __goal__ = 'Read games in pgn file and save its analysis.'
@@ -173,7 +173,7 @@ class GameAnalyzer:
     def parse_games(self):
         start_time = time.perf_counter()
 
-        game_cnt, max_games = 0, 2
+        game_cnt = 0
 
         with open(self.input_pgn) as pgn:
             while True:
