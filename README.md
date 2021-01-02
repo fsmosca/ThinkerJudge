@@ -28,6 +28,7 @@ This will generate plot in png format and save stats to stats.txt. Head to head 
 ![error](https://i.imgur.com/ODKUR5q.png)
 
 ### B. Features
+Full [generated stats](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/stats.txt) can be found in docs folder
 
 #### Fischer-Spassky 1972
 ```
