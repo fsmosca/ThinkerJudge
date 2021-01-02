@@ -7,7 +7,7 @@ Moves are evaluated by Stockfish 13 dev 2020-12-14 NNUE at 5s/position on 4 thre
 * Install python 3.8 or later
 * Download this [repository](https://github.com/fsmosca/ThinkerJudge/archive/main.zip)
 * Install dependency
-  * pip install chess
+  * pip install -r requirements.txt
   
 ### Command line
 Analyze the positions in the game on the pgn file.  
