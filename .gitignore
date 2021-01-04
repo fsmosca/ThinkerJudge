@@ -130,3 +130,9 @@ dmypy.json
 
 # Pycharm
 .idea
+
+# Mine
+*.csv
+*.png
+*.txt
+
