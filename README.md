@@ -23,7 +23,7 @@ See the [help page](https://github.com/fsmosca/ThinkerJudge/wiki/Help) for more 
 
 ##### 2. Generate stats
 This will generate plot in png format and save stats to stats.txt. Head to head average error per game are also saved in csv format.  
-`python stats.py >stats.txt`
+`python stats.py --pgn-folder ./docs/pgn --analysis-file ./docs/human_eval.csv >stats.txt`
 
 ### A. Average error in centipawn comparison
 
