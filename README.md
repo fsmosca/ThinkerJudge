@@ -10,7 +10,7 @@ Moves are evaluated by Stockfish 13 dev 2020-12-14 NNUE at 5s/position on 4 thre
   * pip install -r requirements.txt
   
 ### Command line
-##### Analyze the positions in the game on the pgn file.  
+##### 1. Analyze the positions in the game on the pgn file.  
 ```
 python evaluate.py --input-pgn ./docs/pgn/WorldChamp1972.pgn --engine-file stockfish_12 --engine-options "{'Threads': 2, 'Hash': 256, 'SyzygyPath': 'F:/Chess/EGTB/syzygy_3456'}" --movetime-ms 1000`
 ```
@@ -19,7 +19,7 @@ The analyzed games will be saved in `out_WorldChamp1972.pgn` and the analyzed po
 
 See the [help page](https://github.com/fsmosca/ThinkerJudge/wiki/Help) for more command line options.
 
-##### Generate stats
+##### 2. Generate stats
 This will generate plot in png format and save stats to stats.txt. Head to head average error per game are also saved in csv format.  
 `python stats.py >stats.txt`
 
@@ -28,7 +28,7 @@ This will generate plot in png format and save stats to stats.txt. Head to head 
 ![error](https://i.imgur.com/ODKUR5q.png)
 
 ### B. Features
-Full [generated stats](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/stats.txt) can be found in docs folder
+Fully [generated stats](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/stats.txt) can be found in docs folder.
 
 #### Carlsen-Anand
 ```
