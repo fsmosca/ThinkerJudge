@@ -1,7 +1,9 @@
 # ThinkerJudge
-Evaluation of moves from World Championship Games. [Analysis data](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/human_eval.csv) can be found in the docs folder. Games in [pgn files](https://github.com/fsmosca/ThinkerJudge/tree/main/docs/pgn) are in the docs folder as well.
+Moves from World Championship Games are analyzed using Stockfish engine. [Analysis data](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/human_eval.csv) and games in [pgn files](https://github.com/fsmosca/ThinkerJudge/tree/main/docs/pgn) can be found in docs folder.
 
 Moves are evaluated by Stockfish 13 dev 2020-12-14 NNUE at 5s/position on 4 threads with i7-2600K processor. Calculation of errors starts at move 12 and it is ended once the score of the game move and engine move are more than 500cp or less than -500cp.
+
+You can use evaluate.py using different engine and analysis conditions to analyze the games and use stats.py to generate stats from the resulting analysis.
 
 ### Setup
 * Install python 3.8 or later
