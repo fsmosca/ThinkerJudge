@@ -16,6 +16,9 @@ __script_name__ = 'stats'
 __goal__ = 'Generate stats based on analysis data.'
 
 
+from pathlib import Path
+import argparse
+
 import pandas as pd
 from tabulate import tabulate
 import matplotlib.pyplot as plt
@@ -345,22 +348,24 @@ def plot(df, opph, midph, endph, fn='mean_cp_error.png'):
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        prog='%s %s' % (__script_name__, __version__),
+        description=__goal__, epilog='%(prog)s')
+    parser.add_argument('--pgn-folder', required=True,
+                        help='Input folder location of pgn files (required).')
+    parser.add_argument('--analysis-file', required=True,
+                        help='Input filename or path and filename of the analysis file (required).')
+
+    args = parser.parse_args()
+
     max_score = 500  # score to stop error calculation +/-max_score
     start_move = 12
-    analysisfn = './docs/human_eval.csv'
+    analysisfn = args.analysis_file  # './docs/human_eval.csv'
+
+    pgn_files = Path(args.pgn_folder).glob('**/*.pgn')
+    game_files = [f for f in pgn_files]
 
     names, errors, years = [], [], []
-
-    # Get game files for player errors to generate.
-    game_files = ['./docs/pgn/WorldChamp1921.pgn',
-                  './docs/pgn/WorldChamp1927.pgn',
-                  './docs/pgn/WorldChamp1960.pgn',
-                  './docs/pgn/WorldChamp1972.pgn',
-                  './docs/pgn/WorldChamp1987.pgn',
-                  './docs/pgn/WorldChamp2000.pgn',
-                  './docs/pgn/WorldChamp2013.pgn',
-                  './docs/pgn/WorldChamp2016.pgn',
-                  './docs/pgn/WorldChamp2018.pgn']
 
     # Get player data for table and plot generations.
     for file in game_files:
