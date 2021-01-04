@@ -27,7 +27,7 @@ This will generate plot in png format and save stats to stats.txt. Head to head 
 
 ### A. Average error in centipawn comparison
 
-![error](https://i.imgur.com/ODKUR5q.png)
+![error](https://i.imgur.com/8tBEXDy.png)
 
 ### B. Features
 Fully [generated stats](https://github.com/fsmosca/ThinkerJudge/blob/main/docs/stats.txt) can be found in docs folder.
