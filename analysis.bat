@@ -1,0 +1,1 @@
+python evaluate.py --input-pgn ./docs/pgn/WorldChamp1935.pgn --engine-file F:/Chess/Engines/stockfish_20121407_x64_modern/stockfish_20121407_x64_modern --engine-options "{'Threads': 4, 'Hash': 256}" --movetime-ms 5000
