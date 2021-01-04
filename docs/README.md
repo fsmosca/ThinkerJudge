@@ -1,7 +1,10 @@
-# Analysis data
+### Games in pgn file
+See pgn folder for some world championships games. Tie-break games are removed. Make sure every game has round number as this will be used to generate stats per round or game.
+
+### Analysis data
 Positions are analyzed by Stockfish 13 dev 2020-12-14 on 4 cores with i7-2600K processor at 5 seconds per position.
 
-### Field descriptions
+#### Field descriptions
 1. Event
 2. Date
 3. Round or game number
