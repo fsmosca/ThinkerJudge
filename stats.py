@@ -10,7 +10,7 @@ Setup:
 """
 
 
-__version__ = 'v1.0.0'
+__version__ = 'v1.1.0'
 __author__ = 'fsmosca'
 __script_name__ = 'stats'
 __goal__ = 'Generate stats based on analysis data.'
@@ -355,11 +355,13 @@ def main():
                         help='Input folder location of pgn files (required).')
     parser.add_argument('--analysis-file', required=True,
                         help='Input filename or path and filename of the analysis file (required).')
+    parser.add_argument('--evaluation-start-move', required=False, default=12, type=int,
+                        help='Input move number to start calculating the stats, default=12.')
 
     args = parser.parse_args()
 
     max_score = 500  # score to stop error calculation +/-max_score
-    start_move = 12
+    start_move = args.evaluation_start_move
     analysisfn = args.analysis_file  # './docs/human_eval.csv'
 
     pgn_files = Path(args.pgn_folder).glob('**/*.pgn')
