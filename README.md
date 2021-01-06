@@ -22,7 +22,7 @@ The analyzed games will be saved in `out_WorldChamp1972.pgn` and the analyzed po
 See the [help page](https://github.com/fsmosca/ThinkerJudge/wiki/Help) for more command line options.
 
 ##### 2. Generate stats
-This will generate plot in png format and save stats to stats.txt. Head to head average error per game are also saved in csv format.  
+This will generate plot in png format and save stats to stats.txt. Head to head average error per game are also saved in csv format. The evaluation starts at move number 12 by default. You can change this to any number by `--evaluation-start-move <move number>`.  
 `python stats.py --pgn-folder ./docs/pgn --analysis-file ./docs/human_eval.csv >stats.txt`
 
 ### A. Average error in centipawn comparison
