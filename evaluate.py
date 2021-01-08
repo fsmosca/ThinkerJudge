@@ -12,7 +12,7 @@ requirements:
 """
 
 
-__version__ = 'v1.1.0'
+__version__ = 'v1.2.0'
 __author__ = 'fsmosca'
 __script_name__ = 'Chess Positions Evaluator'
 __goal__ = 'Read games in pgn file and save its analysis.'
@@ -34,7 +34,8 @@ logging.basicConfig(level=logging.DEBUG, filename='evaluate.log',
 
 class GameAnalyzer:
     def __init__(self, engine_file, engine_options, output_eval_file,
-                 input_pgn, output_pgn, depth=1000, movetime_ms=60000, min_move=1):
+                 input_pgn, output_pgn, depth=1000, movetime_ms=60000,
+                 min_move=1, max_move=1000):
         self.engine_file = engine_file
         self.engine_options = engine_options
         self.output_eval_file = output_eval_file
@@ -51,6 +52,7 @@ class GameAnalyzer:
         self.depth = depth
         self.movetime_ms = movetime_ms
         self.min_move = min_move
+        self.max_move = max_move
 
     @staticmethod
     def piece_count(board):
@@ -116,6 +118,12 @@ class GameAnalyzer:
             # Respect minimum move number option.
             if fmvn < self.min_move:
                 my_node = my_node.add_main_variation(game_move)
+                continue
+
+            if fmvn > self.max_move:
+                my_node = my_node.add_main_variation(game_move)
+
+                # Continue writing the game move but do not analyze.
                 continue
 
             num_pcs = GameAnalyzer.piece_count(board)
@@ -216,6 +224,9 @@ def main():
     parser.add_argument('--min-move', required=False, type=int,
                         help='The minimum move number to start the analysis (not required), default=1.',
                         default=1)
+    parser.add_argument('--max-move', required=False, type=int,
+                        help='The maximum move number to end the analysis (not required), default=1000.',
+                        default=1000)
     parser.add_argument('--engine-options', required=False,
                         help='Input engine options (not required), engine default options will be used. Example:\n'
                              '--engine-options "{\'Threads\': 2, \'Hash\': 128}" or\n'
@@ -232,7 +243,8 @@ def main():
     a = GameAnalyzer(args.engine_file, args.engine_options,
                      args.output_eval_file, args.input_pgn,
                      args.output_pgn, depth=args.depth,
-                     movetime_ms=args.movetime_ms, min_move=args.min_move)
+                     movetime_ms=args.movetime_ms, min_move=args.min_move,
+                     max_move=args.max_move)
 
     a.parse_games()
 
